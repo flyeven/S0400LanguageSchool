@@ -1,27 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LanguageSchool.Engine
 {
     using Interfaces.Engine;
 
-    class Engine : IEngine
+    public class Engine : IEngine
     {
+
+
         public void DispatchCommands(string commandStatement)
         {
-            throw new NotImplementedException();
+            string[] commandWords = commandStatement.Split(' ');
         }
 
-        public void ExecuteCreate(string commandStatement)
+        public void ExecuteCreate(List<string> commandStatement)
         {
             throw new NotImplementedException();
         }
 
-        public void ExecuteAdd(string commandStatement)
+        public void ExecuteAdd(List<string> commandStatement)
         {
             throw new NotImplementedException();
         }
 
-        public void ExecuteConduct(string commandStatement)
+        public void ExecuteConduct(List<string> commandStatement)
         {
             throw new NotImplementedException();
         }
