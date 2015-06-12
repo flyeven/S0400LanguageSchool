@@ -1,0 +1,6 @@
+C:\Users\Miroslav\Documents\Programming\PracticalProjects\LanguageSchool\LanguageSchool\bin\Debug\LanguageSchool.exe.config
+C:\Users\Miroslav\Documents\Programming\PracticalProjects\LanguageSchool\LanguageSchool\bin\Debug\LanguageSchool.exe
+C:\Users\Miroslav\Documents\Programming\PracticalProjects\LanguageSchool\LanguageSchool\bin\Debug\LanguageSchool.pdb
+C:\Users\Miroslav\Documents\Programming\PracticalProjects\LanguageSchool\LanguageSchool\obj\Debug\LanguageSchool.csprojResolveAssemblyReference.cache
+C:\Users\Miroslav\Documents\Programming\PracticalProjects\LanguageSchool\LanguageSchool\obj\Debug\LanguageSchool.exe
+C:\Users\Miroslav\Documents\Programming\PracticalProjects\LanguageSchool\LanguageSchool\obj\Debug\LanguageSchool.pdb
