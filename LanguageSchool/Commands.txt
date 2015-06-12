@@ -1,3 +1,6 @@
 Commands
 
-create person coursist
+Create
+........................................
+
+create course_participant

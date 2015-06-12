@@ -7,10 +7,10 @@ namespace LanguageSchool.Interfaces.Engine
     {
         void DispatchCommands(string commandStatement);
 
-        void ExecuteCreate(List<string> commandStatement);
+        void ExecuteCreate(string[] commandStatement);
 
-        void ExecuteAdd(List<string> commandStatement);
+        void ExecuteAdd(string[] commandStatement);
 
-        void ExecuteConduct(List<string> commandStatement);
+        void ExecuteConduct(string[] commandStatement);
     }
 }

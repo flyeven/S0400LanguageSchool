@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LanguageSchool.Engine.Engine" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="38.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAEAAAQAAAAAAACAAAA=</HashCode>
+      <FileName>Engine\Engine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LanguageSchool.LanguageSchoolMain" Collapsed="true">
+    <Position X="40" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>LanguageSchoolMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="LanguageSchool.Interfaces.Courses.Adults.IAdultCourses" Collapsed="true">
+    <Position X="26.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Courses\Adults\IAdultCourses.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Courses.Adults.IComputerCourseForAdults" Collapsed="true">
+    <Position X="24.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Interfaces\Courses\Adults\IComputerCourseForAdults.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Courses.Adults.IGeneralEducationCourseForAdults" Collapsed="true">
+    <Position X="26.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Interfaces\Courses\Adults\IGeneralEducationCourseForAdults.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Courses.Adults.ILanguageCourseForAdults" Collapsed="true">
+    <Position X="29" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Courses\Adults\ILanguageCourseForAdults.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Courses.Children.IChildrenCourses" Collapsed="true">
+    <Position X="32.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Courses\Children\IChildrenCourses.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Courses.Children.IGeneralEducationCourseForAdults" Collapsed="true">
+    <Position X="31.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Interfaces\Courses\Children\IGeneralEducationCourseForAdults.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Courses.Children.ILanguageCourseForAdults" Collapsed="true">
+    <Position X="33.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Courses\Children\ILanguageCourseForChildren.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Courses.IClassInfo" Collapsed="true">
+    <Position X="38.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAIAAAAAAAAIAAAAAAAAAACAAAAEAA=</HashCode>
+      <FileName>Interfaces\Courses\IClassInfo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Courses.IConductedClasses" Collapsed="true">
+    <Position X="40" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAgAAAAAAAAAAAACAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Courses\IConductedClasses.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Courses.ICourse" Collapsed="true">
+    <Position X="29" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKCgAAAAQQAAAAAAEIAAAAAAAAAAAAAAAAAgAAAABA=</HashCode>
+      <FileName>Interfaces\Courses\ICourse.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Courses.IExamPreparation" Collapsed="true">
+    <Position X="35.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Courses\IExamPreparation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Courses.IUniversityApplication" Collapsed="true">
+    <Position X="22.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Courses\IUniversityApplication.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Engine.IEngine" Collapsed="true">
+    <Position X="41.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAEAAAQAAAAAAACAAAA=</HashCode>
+      <FileName>Interfaces\Engine\IEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Person.IPerson" Collapsed="true">
+    <Position X="24.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAoAAAQAAQAAQIAAgAAQAAAEgAAAAg=</HashCode>
+      <FileName>Interfaces\Person\IPerson.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Person.Types.Client.ICourseParticipant" Collapsed="true">
+    <Position X="22" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Person\Types\Client\ICourseParticipant.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Person.Types.Employee.ISecretary" Collapsed="true">
+    <Position X="24.25" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Person\Types\Employee\ISecretary.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Person.Types.Employee.ITeacher" Collapsed="true">
+    <Position X="26.5" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Person\Types\Employee\ITeacher.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Person.Types.IClient" Collapsed="true">
+    <Position X="22" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Person\Types\IClient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LanguageSchool.Interfaces.Person.Types.IEmployee" Collapsed="true">
+    <Position X="26" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Person\Types\IEmployee.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="LanguageSchool.Enum.Course.EAge" Collapsed="true">
+    <Position X="38.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Enum\Course\EAge.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LanguageSchool.Enum.Course.EComputerLanguage" Collapsed="true">
+    <Position X="40" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAGAAAAAAEAAAAAAAAAAABAAAAAAAABABAAAAAAAA=</HashCode>
+      <FileName>Enum\Course\EComputerLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LanguageSchool.Enum.Course.ECourseActivityStatus" Collapsed="true">
+    <Position X="41.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Enum\Course\ECourseActivityStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LanguageSchool.Enum.Course.ECoursePlace" Collapsed="true">
+    <Position X="43.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enum\Course\ECoursePlace.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LanguageSchool.Enum.Course.EExams" Collapsed="true">
+    <Position X="38.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEACAAAAIACAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enum\Course\EExams.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LanguageSchool.Enum.Course.EGeneralEducationSubjects" Collapsed="true">
+    <Position X="40" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEQAAAAAIAAAAIAAAAACAAAAACAAAACAAAAAAA=</HashCode>
+      <FileName>Enum\Course\EGeneralEducationSubjects.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LanguageSchool.Enum.Course.EGroupType" Collapsed="true">
+    <Position X="41.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Enum\Course\EGroupType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LanguageSchool.Enum.Course.ELanguage" Collapsed="true">
+    <Position X="43.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAIAACQAACAAAAAQAAIAAAABAAAAAAAAIAAACAAAAA=</HashCode>
+      <FileName>Enum\Course\ELanguage.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LanguageSchool.Enum.Course.ELanguageLevelForAdults" Collapsed="true">
+    <Position X="38.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAMACAAAAAGABAAAAAAAAAAA=</HashCode>
+      <FileName>Enum\Course\ELanguageLevelForAdults.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LanguageSchool.Enum.Course.ELanguageLevelForChildren" Collapsed="true">
+    <Position X="40" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAMACAAAAAGABAAAAAAAAAAA=</HashCode>
+      <FileName>Enum\Course\ELanguageLevelForChildren.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LanguageSchool.Enum.Person.EPersonType" Collapsed="true">
+    <Position X="41.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Enum\Person\EPersonType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LanguageSchool.Enum.Person.ESallaryType" Collapsed="true">
+    <Position X="43.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Enum\Person\ESallaryType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

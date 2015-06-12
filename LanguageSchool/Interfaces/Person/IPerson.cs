@@ -6,8 +6,6 @@ namespace LanguageSchool.Interfaces.Person
 {
     public interface IPerson
     {
-        IList<IPerson> personList { get; set; }
-
         ulong Id { get; set; }
 
         string FirstName { get; set; }
@@ -30,10 +28,8 @@ namespace LanguageSchool.Interfaces.Person
 
         DateTime RegistrationDate { get; set; }
 
-        ESalaryType SalaryType { get; set; }
+        ESallaryType SallaryType { get; set; }
 
         decimal SallarySum { get; set; }
-
-        void Add(IPerson person);
     }
 }

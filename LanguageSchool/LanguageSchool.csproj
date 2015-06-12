@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Engine\Engine.cs" />
     <Compile Include="Enum\Course\EAge.cs" />
     <Compile Include="Enum\Course\EComputerLanguage.cs" />
     <Compile Include="Enum\Course\ECourseActivityStatus.cs" />
@@ -52,7 +53,7 @@
     <Compile Include="Enum\Course\ELanguageLevelForAdults.cs" />
     <Compile Include="Enum\Course\ELanguage.cs" />
     <Compile Include="Enum\Person\EPersonType.cs" />
-    <Compile Include="Enum\Person\ESalaryType.cs" />
+    <Compile Include="Enum\Person\ESallaryType.cs" />
     <Compile Include="Interfaces\Courses\Adults\IAdultCourses.cs" />
     <Compile Include="Interfaces\Courses\Adults\IComputerCourseForAdults.cs" />
     <Compile Include="Interfaces\Courses\Children\IChildrenCourses.cs" />
@@ -73,14 +74,18 @@
     <Compile Include="Interfaces\Person\Types\IClient.cs" />
     <Compile Include="Interfaces\Person\Types\IEmployee.cs" />
     <Compile Include="LanguageSchoolMain.cs" />
+    <Compile Include="People\Client.cs" />
+    <Compile Include="People\CourseParticipant.cs" />
+    <Compile Include="People\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Courses\" />
-    <Folder Include="People\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
