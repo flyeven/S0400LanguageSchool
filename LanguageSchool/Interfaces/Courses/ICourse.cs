@@ -10,7 +10,7 @@ namespace LanguageSchool.Interfaces.Courses
     {
         IList<ICourse> courseList { get; set; }
 
-        ulong Id { get; set; }
+        ulong Id { get; }
 
         string CourseName { get; set; }
 

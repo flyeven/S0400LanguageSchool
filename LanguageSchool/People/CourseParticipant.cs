@@ -10,10 +10,10 @@ namespace LanguageSchool.People
     {
         private string clientType;
 
-        public CourseParticipant(ulong id, string firstName, string middleName, string lastName, string civilNumber, DateTime birthDate,
+        public CourseParticipant(string firstName, string middleName, string lastName, string civilNumber, DateTime birthDate,
             string telephoneNumber, string emailAddress, string country, string city, DateTime registrationDate, ESallaryType sallaryType,
             decimal sallarySum)
-            : base(id, firstName, middleName, lastName, civilNumber, birthDate, telephoneNumber, emailAddress, country, city,
+            : base(firstName, middleName, lastName, civilNumber, birthDate, telephoneNumber, emailAddress, country, city,
             registrationDate, sallaryType, sallarySum)
         {
 

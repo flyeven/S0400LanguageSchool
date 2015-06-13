@@ -3,4 +3,4 @@ Commands
 Create
 ........................................
 
-create course_participant
+create course_participant Ivan Ivanov Hristov 345678 27.02.1977 2345678 email@email.com Bulgaria Sofia 12.06.2015 Monthly 2548

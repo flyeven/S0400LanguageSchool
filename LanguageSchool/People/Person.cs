@@ -5,11 +5,13 @@ namespace LanguageSchool.People
 {
     using Interfaces.Person;
     using Enum.Person;
+    using System.Text;
 
     public abstract class Person : IPerson
     {
 
         private static IList<IPerson> personList;
+        private static ulong increaseId = 0;
         private ulong id;
         private string firstName;
         private string middleName;
@@ -24,11 +26,12 @@ namespace LanguageSchool.People
         private ESallaryType sallaryType;
         private decimal sallarySum;
 
-        protected Person(ulong id, string firstName, string middleName, string lastName, string civilNumber, DateTime birthDate,
+        protected Person(string firstName, string middleName, string lastName, string civilNumber, DateTime birthDate,
             string telephoneNumber, string emailAddress, string country, string city, DateTime registrationDate, ESallaryType sallaryType,
             decimal sallarySum)
         {
-            this.Id = id;
+            Person.increaseId++;
+            this.id = increaseId;
             this.FirstName = firstName;
             this.MiddleName = middleName;
             this.LastName = lastName;
@@ -40,27 +43,22 @@ namespace LanguageSchool.People
             this.City = city;
             this.RegistrationDate = registrationDate;
             this.SallaryType = sallaryType;
-            this.SallarySum = SallarySum;
-        }
-
-
-        public static IList<IPerson> PersonList
-        {
-            get
-            {
-                return Person.personList;
-            }
+            this.SallarySum = sallarySum;
         }
 
         public ulong Id
         {
             get
             {
-                return this.Id;
+                return this.id;
             }
-            set
+        }
+
+        public static IList<IPerson> PersonList
+        {
+            get
             {
-                this.id = value;
+                return Person.personList;
             }
         }
 
@@ -211,6 +209,26 @@ namespace LanguageSchool.People
         public static void Add(IPerson person)
         {
             Person.personList.Add(person);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendFormat("{0}", this.Id).AppendLine()
+                .AppendFormat("{0}", this.FirstName).AppendLine()
+                .AppendFormat("{0}", this.MiddleName).AppendLine()
+                .AppendFormat("{0}", this.LastName).AppendLine()
+                .AppendFormat("{0}", this.CivilNumber).AppendLine()
+                .AppendFormat("{0}", this.BirthDate).AppendLine()
+                .AppendFormat("{0}", this.TelephoneNumber).AppendLine()
+                .AppendFormat("{0}", this.EmailAddress).AppendLine()
+                .AppendFormat("{0}", this.Country).AppendLine()
+                .AppendFormat("{0}", this.City).AppendLine()
+                .AppendFormat("{0}", this.RegistrationDate).AppendLine()
+                .AppendFormat("{0}", this.SallarySum);
+
+            return sb.ToString();
         }
     }
 }

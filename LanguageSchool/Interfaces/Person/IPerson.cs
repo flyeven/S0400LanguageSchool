@@ -6,7 +6,7 @@ namespace LanguageSchool.Interfaces.Person
 {
     public interface IPerson
     {
-        ulong Id { get; set; }
+        ulong Id { get; }
 
         string FirstName { get; set; }
 

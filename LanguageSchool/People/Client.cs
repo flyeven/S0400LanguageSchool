@@ -8,10 +8,10 @@ namespace LanguageSchool.People
     {
         private EPersonType personType;
 
-        protected Client(ulong id, string firstName, string middleName, string lastName, string civilNumber, DateTime birthDate,
+        protected Client(string firstName, string middleName, string lastName, string civilNumber, DateTime birthDate,
             string telephoneNumber, string emailAddress, string country, string city, DateTime registrationDate, ESallaryType sallaryType,
             decimal sallarySum)
-            : base(id, firstName, middleName, lastName, civilNumber, birthDate, telephoneNumber, emailAddress, country, city, registrationDate,
+            : base(firstName, middleName, lastName, civilNumber, birthDate, telephoneNumber, emailAddress, country, city, registrationDate,
             sallaryType, sallarySum)
         {
 
