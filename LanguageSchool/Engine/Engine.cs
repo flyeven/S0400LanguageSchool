@@ -37,6 +37,18 @@ namespace LanguageSchool.Engine
                         this.ConvertStrintIntoDateTime(cW[11]), ESallaryType.Monthly,
                         decimal.Parse(cW[13]));
                     break;
+                case "teacher":
+                    Person teacher = new Teacher(cW[2], cW[3], cW[4],
+                        cW[5], this.ConvertStrintIntoDateTime(cW[6]), cW[7], cW[8], cW[9], cW[10],
+                        this.ConvertStrintIntoDateTime(cW[11]), ESallaryType.Monthly,
+                        decimal.Parse(cW[13]));
+                    break;
+                case "secretary":
+                    Person secretary = new Secretary(cW[2], cW[3], cW[4],
+                        cW[5], this.ConvertStrintIntoDateTime(cW[6]), cW[7], cW[8], cW[9], cW[10],
+                        this.ConvertStrintIntoDateTime(cW[11]), ESallaryType.Monthly,
+                        decimal.Parse(cW[13]));
+                    break;
                 default:
                     break;
             }

@@ -7,6 +7,6 @@ namespace LanguageSchool.Interfaces.Person.Types.Employee
     {
         string EmployeeType { get; set; }
 
-        IList<string> teachingSubjects { get; set; }
+        IList<string> TeachingSubjects { get; set; }
     }
 }
