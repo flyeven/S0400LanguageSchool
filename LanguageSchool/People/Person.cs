@@ -11,8 +11,6 @@ namespace LanguageSchool.People
     {
 
         private static IList<IPerson> personList;
-        private static ulong increaseId = 0;
-        private ulong id;
         private string firstName;
         private string middleName;
         private string lastName;
@@ -30,8 +28,6 @@ namespace LanguageSchool.People
             string telephoneNumber, string emailAddress, string country, string city, DateTime registrationDate, ESallaryType sallaryType,
             decimal sallarySum)
         {
-            Person.increaseId++;
-            this.id = increaseId;
             this.FirstName = firstName;
             this.MiddleName = middleName;
             this.LastName = lastName;
@@ -46,12 +42,10 @@ namespace LanguageSchool.People
             this.SallarySum = sallarySum;
         }
 
-        public ulong Id
+        public virtual ulong Id
         {
-            get
-            {
-                return this.id;
-            }
+            get;
+            protected set;
         }
 
         public static IList<IPerson> PersonList
