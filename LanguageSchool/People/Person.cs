@@ -10,7 +10,7 @@ namespace LanguageSchool.People
     public abstract class Person : IPerson
     {
 
-        private static IList<IPerson> personList;
+        private static IList<IPerson> personList = new List<IPerson>();
         private string firstName;
         private string middleName;
         private string lastName;

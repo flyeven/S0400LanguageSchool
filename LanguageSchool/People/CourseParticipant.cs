@@ -16,7 +16,7 @@ namespace LanguageSchool.People
             : base(firstName, middleName, lastName, civilNumber, birthDate, telephoneNumber, emailAddress, country, city,
             registrationDate, sallaryType, sallarySum)
         {
-
+            
         }
 
         public string ClientType

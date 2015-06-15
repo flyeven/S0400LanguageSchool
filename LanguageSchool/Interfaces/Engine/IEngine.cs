@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LanguageSchool.Interfaces.Person;
+using System;
 using System.Collections.Generic;
 
 namespace LanguageSchool.Interfaces.Engine
@@ -9,7 +10,7 @@ namespace LanguageSchool.Interfaces.Engine
 
         void ExecuteCreate(string[] commandStatement);
 
-        void ExecuteAdd(string[] commandStatement);
+        void ExecuteAdd(IPerson person);
 
         void ExecuteConduct(string[] commandStatement);
     }

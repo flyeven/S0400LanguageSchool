@@ -36,27 +36,30 @@ namespace LanguageSchool.Engine
                         cW[5], this.ConvertStrintIntoDateTime(cW[6]), cW[7], cW[8], cW[9], cW[10], 
                         this.ConvertStrintIntoDateTime(cW[11]), ESallaryType.Monthly,
                         decimal.Parse(cW[13]));
+                    this.ExecuteAdd(courseParticipant);
                     break;
                 case "teacher":
                     Person teacher = new Teacher(cW[2], cW[3], cW[4],
                         cW[5], this.ConvertStrintIntoDateTime(cW[6]), cW[7], cW[8], cW[9], cW[10],
                         this.ConvertStrintIntoDateTime(cW[11]), ESallaryType.Monthly,
                         decimal.Parse(cW[13]));
+                    this.ExecuteAdd(teacher);
                     break;
                 case "secretary":
                     Person secretary = new Secretary(cW[2], cW[3], cW[4],
                         cW[5], this.ConvertStrintIntoDateTime(cW[6]), cW[7], cW[8], cW[9], cW[10],
                         this.ConvertStrintIntoDateTime(cW[11]), ESallaryType.Monthly,
                         decimal.Parse(cW[13]));
-                    break;
+                    this.ExecuteAdd(secretary);
+                     break;
                 default:
                     break;
             }
         }
 
-        public void ExecuteAdd(string[] commandWords)
+        public void ExecuteAdd(IPerson person)
         {
-            throw new NotImplementedException();
+            Person.Add(person);
         }
 
         public void ExecuteConduct(string[] commandWords)
