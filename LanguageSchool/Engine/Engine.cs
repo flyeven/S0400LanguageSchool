@@ -57,7 +57,7 @@ namespace LanguageSchool.Engine
             }
         }
 
-        public void ExecuteAdd(IPerson person)
+        private void ExecuteAdd(IPerson person)
         {
             Person.Add(person);
         }

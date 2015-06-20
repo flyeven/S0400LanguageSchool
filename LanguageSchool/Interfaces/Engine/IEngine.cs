@@ -10,8 +10,6 @@ namespace LanguageSchool.Interfaces.Engine
 
         void ExecuteCreate(string[] commandStatement);
 
-        void ExecuteAdd(IPerson person);
-
         void ExecuteConduct(string[] commandStatement);
     }
 }

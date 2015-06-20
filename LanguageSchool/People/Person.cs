@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LanguageSchool.People
 {
     using Interfaces.Person;
     using Enum.Person;
     using System.Text;
+    using LanguageSchool.Interfaces.Person.Types;
 
     public abstract class Person : IPerson
     {
@@ -223,6 +225,76 @@ namespace LanguageSchool.People
                 .AppendFormat("{0}", this.SallarySum);
 
             return sb.ToString();
+        }
+
+        public static void GetAllTeachers()
+        {
+            IList<IPerson> persons = Person.personList;
+
+            foreach (var item in persons)
+            {
+                string teacher = item.GetType().Name;
+                if (teacher == "Teacher")
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
+
+        public static void GetAllCourseParticipants()
+        {
+            IList<IPerson> persons = Person.personList;
+
+            foreach (var item in persons)
+            {
+                string courseParticipant = item.GetType().Name;
+                if (courseParticipant == "CourseParticipant")
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
+
+        public static void GetAllSecretaries()
+        {
+            IList<IPerson> persons = Person.personList;
+
+            foreach (var item in persons)
+            {
+                string secretary = item.GetType().Name;
+                if (secretary == "Secretary")
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
+
+        public static void GetAllClients()
+        {
+            IList<IPerson> clients = Person.personList;
+
+            foreach (var item in clients)
+            {
+                string client = item.GetType().BaseType.ToString().Split('.')[2];
+                if (client == "Client")
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
+
+        public static void GetAllEmployees()
+        {
+            IList<IPerson> employees = Person.personList;
+
+            foreach (var item in employees)
+            {
+                string employee = item.GetType().BaseType.ToString().Split('.')[2];
+                if (employee == "Employee")
+                {
+                    Console.WriteLine(item);
+                }
+            }
         }
     }
 }
