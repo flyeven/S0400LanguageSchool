@@ -3,7 +3,7 @@ using LanguageSchool.Enum.Course;
 
 namespace LanguageSchool.Interfaces.Courses.Children
 {
-    public interface ILanguageCourseForAdults : IChildrenCourses
+    public interface ILanguageCourseForChildren : IChildrenCourses
     {
         ELanguage Language { get; set; }
         ELanguageLevelForChildren LanguageLevel { get; set; }
