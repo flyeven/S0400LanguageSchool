@@ -1,10 +1,12 @@
 ﻿using System;
 using LanguageSchool.Engine;
+using System.Linq;
 
 namespace LanguageSchool
 {
     using Interfaces.Engine;
     using LanguageSchool.People;
+    using System.Collections.Generic;
 
     class LanguageSchoolMain
     {
@@ -21,7 +23,8 @@ namespace LanguageSchool
 
             //Person.GetAllClients();
 
-            //Person.GetAllEmployees();
+            //List<Person> persons = Person.GetAllEmployees();
+
         }
 
         public static void Start(IEngine engine)

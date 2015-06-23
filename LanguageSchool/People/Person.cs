@@ -227,8 +227,10 @@ namespace LanguageSchool.People
             return sb.ToString();
         }
 
-        public static void GetAllTeachers()
+        public static List<IPerson> GetAllTeachers()
         {
+
+            List<IPerson> teachers = new List<IPerson>();
             IList<IPerson> persons = Person.personList;
 
             foreach (var item in persons)
@@ -236,13 +238,16 @@ namespace LanguageSchool.People
                 string teacher = item.GetType().Name;
                 if (teacher == "Teacher")
                 {
-                    Console.WriteLine(item);
+                    teachers.Add(item);
                 }
             }
+
+            return teachers;
         }
 
-        public static void GetAllCourseParticipants()
+        public static List<IPerson> GetAllCourseParticipants()
         {
+            List<IPerson> participants = new List<IPerson>();
             IList<IPerson> persons = Person.personList;
 
             foreach (var item in persons)
@@ -250,13 +255,17 @@ namespace LanguageSchool.People
                 string courseParticipant = item.GetType().Name;
                 if (courseParticipant == "CourseParticipant")
                 {
-                    Console.WriteLine(item);
+                    participants.Add(item);
                 }
             }
+
+            return participants;
         }
 
-        public static void GetAllSecretaries()
+        public static List<IPerson> GetAllSecretaries()
         {
+            List<IPerson> secretaries = new List<IPerson>();
+
             IList<IPerson> persons = Person.personList;
 
             foreach (var item in persons)
@@ -264,13 +273,16 @@ namespace LanguageSchool.People
                 string secretary = item.GetType().Name;
                 if (secretary == "Secretary")
                 {
-                    Console.WriteLine(item);
+                    secretaries.Add(item);
                 }
             }
+
+            return secretaries;
         }
 
-        public static void GetAllClients()
+        public static List<IPerson> GetAllClients()
         {
+            List<IPerson> clientsOutput = new List<IPerson>();
             IList<IPerson> clients = Person.personList;
 
             foreach (var item in clients)
@@ -278,13 +290,16 @@ namespace LanguageSchool.People
                 string client = item.GetType().BaseType.ToString().Split('.')[2];
                 if (client == "Client")
                 {
-                    Console.WriteLine(item);
+                    clientsOutput.Add(item);
                 }
             }
+
+            return clientsOutput;
         }
 
-        public static void GetAllEmployees()
+        public static List<IPerson> GetAllEmployees()
         {
+            List<IPerson> outputEmployees = new List<IPerson>();
             IList<IPerson> employees = Person.personList;
 
             foreach (var item in employees)
@@ -292,9 +307,11 @@ namespace LanguageSchool.People
                 string employee = item.GetType().BaseType.ToString().Split('.')[2];
                 if (employee == "Employee")
                 {
-                    Console.WriteLine(item);
+                    outputEmployees.Add(item);
                 }
             }
+
+            return outputEmployees;
         }
     }
 }
