@@ -21,7 +21,7 @@ namespace LanguageSchool
 
             //Person.GetAllClients();
 
-            Person.GetAllEmployees();
+            //Person.GetAllEmployees();
         }
 
         public static void Start(IEngine engine)

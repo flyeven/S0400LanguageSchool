@@ -9,7 +9,6 @@ namespace LanguageSchool.People
         private EPersonType personType;
         private ulong id;
         public static ulong increaseId = 0;
-        public const string ClientType = "Client";
 
         protected Client(string firstName, string middleName, string lastName, string civilNumber, DateTime birthDate,
             string telephoneNumber, string emailAddress, string country, string city, DateTime registrationDate, ESallaryType sallaryType,
