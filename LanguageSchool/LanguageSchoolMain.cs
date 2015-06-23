@@ -7,6 +7,7 @@ namespace LanguageSchool
     using Interfaces.Engine;
     using LanguageSchool.People;
     using System.Collections.Generic;
+    using LanguageSchool.Interfaces.Person;
 
     class LanguageSchoolMain
     {
@@ -23,8 +24,7 @@ namespace LanguageSchool
 
             //Person.GetAllClients();
 
-            //List<Person> persons = Person.GetAllEmployees();
-
+            //Person.GetAllEmployees();
         }
 
         public static void Start(IEngine engine)
