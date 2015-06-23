@@ -6,7 +6,15 @@ Create
 create course_participant Ivan Ivanov Hristov 345678 27.02.1977 2345678 email@email.com Bulgaria Sofia 12.06.2015 Monthly 2548
 create teacher Petko Petkano Jordanov 345678 27.02.1977 2345678 petko@petko.com France Paris 12.06.2015 Monthly 2548
 create secretary Mihaela Metodieva Mitrina 345678 27.02.1977 2345678 mihaela@mihaela.com France Paris 12.06.2015 Monthly 5000
-
 create course_participant Milko Penkov Ivanov 345678 27.02.1977 2345678 milko@milko.com Bulgaria Sofia 12.06.2015 Monthly 9000
 create secretary Zlatina Ognjanova Dimitrova 345678 27.02.1977 2345678 zlatina@zlatina.com Hungary Budapest 12.06.2015 Monthly 5000
 create teacher Nadja Draganova Babacheva 345678 27.02.1977 2345678 nadja@nadja.com Germany Berlin 12.06.2015 Monthly 7000
+
+
+
+public LanguageCourseForAdults(string courseName, ECourseActivityStatus activityStatus, EGroupType groupType, ECoursePlace coursePlace,
+            decimal price, IList<IPerson> studentsInCourse, IList<IPerson> teachersInCourse, IList<IConductedClasses> conductedClasses, EAge age, ELanguage language, 
+            ELanguageLevelForAdults languageLevelForAdults)
+
+
+create adult_course ivan active group_4_persons local 500 Ivan_Ivanov_Hristov_email@email.com,Milko_Penkov_Ivanov_milko@milko.com Petko_Petkanov_Jordanov_petko@petko.com,Nadja_Draganova_Babacheva_nadja@nadja.com null adults english a1

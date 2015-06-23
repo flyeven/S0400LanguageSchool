@@ -8,7 +8,7 @@ using LanguageSchool.Enum.Person;
 
 namespace LanguageSchool.People
 {
-    class Teacher : Employee, ITeacher
+    public class Teacher : Employee, ITeacher
     {
         private string employeeType;
         private List<string> teachingSubjects;

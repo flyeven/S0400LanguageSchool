@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="LanguageSchool.Courses.Course" Collapsed="true">
-    <Position X="12.5" Y="10" Width="1.5" />
+    <Position X="7.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAKDkAAAAQQAAAABAEIAAAECAAAAAAAAAAAAgEAAgpA=</HashCode>
       <FileName>Courses\Course.cs</FileName>
@@ -9,7 +9,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LanguageSchool.Courses.AdultCourse" Collapsed="true">
-    <Position X="15.75" Y="11.25" Width="1.5" />
+    <Position X="8.25" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Courses\AdultCourse.cs</FileName>
@@ -17,7 +17,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LanguageSchool.Courses.LanguageCourseForAdults" Collapsed="true">
-    <Position X="15.75" Y="12.75" Width="1.5" />
+    <Position X="9.25" Y="11.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAABAgAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Courses\LanguageCourseForAdults.cs</FileName>
@@ -25,7 +25,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LanguageSchool.Courses.ChildrenCourse" Collapsed="true">
-    <Position X="11.75" Y="11.25" Width="1.5" />
+    <Position X="6" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Courses\ChildrenCourse.cs</FileName>
@@ -33,7 +33,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LanguageSchool.Courses.LanguageCourseForChildren" Collapsed="true">
-    <Position X="11.75" Y="12.75" Width="1.5" />
+    <Position X="5" Y="11.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAABAgAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Courses\LanguageCourseForChildren.cs</FileName>
@@ -41,70 +41,70 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="LanguageSchool.Interfaces.Courses.Adults.IAdultCourses" Collapsed="true">
-    <Position X="17.25" Y="5.75" Width="1.5" />
+    <Position X="17.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\Courses\Adults\IAdultCourses.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LanguageSchool.Interfaces.Courses.Adults.IComputerCourseForAdults" Collapsed="true">
-    <Position X="15" Y="7.25" Width="1.5" />
+    <Position X="15.5" Y="7.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Interfaces\Courses\Adults\IComputerCourseForAdults.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LanguageSchool.Interfaces.Courses.Adults.IGeneralEducationCourseForAdults" Collapsed="true">
-    <Position X="17.25" Y="7.25" Width="1.5" />
+    <Position X="17.75" Y="7.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Interfaces\Courses\Adults\IGeneralEducationCourseForAdults.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LanguageSchool.Interfaces.Courses.Adults.ILanguageCourseForAdults" Collapsed="true">
-    <Position X="19.5" Y="7.25" Width="1.5" />
+    <Position X="20.25" Y="7.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\Courses\Adults\ILanguageCourseForAdults.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LanguageSchool.Interfaces.Courses.Children.IChildrenCourses" Collapsed="true">
-    <Position X="9.5" Y="5.75" Width="1.5" />
+    <Position X="10" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\Courses\Children\IChildrenCourses.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LanguageSchool.Interfaces.Courses.Children.IGeneralEducationCourseForAdults" Collapsed="true">
-    <Position X="8.25" Y="7.25" Width="1.5" />
+    <Position X="8" Y="7.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Interfaces\Courses\Children\IGeneralEducationCourseForAdults.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LanguageSchool.Interfaces.Courses.Children.ILanguageCourseForChildren" Collapsed="true">
-    <Position X="10.5" Y="7.25" Width="1.5" />
+    <Position X="11" Y="7.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\Courses\Children\ILanguageCourseForChildren.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LanguageSchool.Interfaces.Courses.ICourse" Collapsed="true">
-    <Position X="12.75" Y="4.5" Width="1.5" />
+    <Position X="13.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACCgAAAAQQAAAAAAEIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Interfaces\Courses\ICourse.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LanguageSchool.Interfaces.Courses.IExamPreparation" Collapsed="true">
-    <Position X="6" Y="5.75" Width="1.5" />
+    <Position X="6.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\Courses\IExamPreparation.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LanguageSchool.Interfaces.Courses.IUniversityApplication" Collapsed="true">
-    <Position X="12.75" Y="5.75" Width="1.5" />
+    <Position X="13.25" Y="5.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\Courses\IUniversityApplication.cs</FileName>

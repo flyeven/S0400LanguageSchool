@@ -16,8 +16,8 @@ namespace LanguageSchool.Courses
         private EAge age;
 
         protected AdultCourse(string courseName, ECourseActivityStatus activityStatus, EGroupType groupType, ECoursePlace coursePlace,
-            decimal price, IList<IPerson> studentsInCourse, IList<IConductedClasses> conductedClasses, EAge age)
-            : base(courseName, activityStatus, groupType, coursePlace, price, studentsInCourse, conductedClasses)
+            decimal price, IList<IPerson> studentsInCourse, IList<IPerson> teachersInCourse, IList<IConductedClasses> conductedClasses, EAge age)
+            : base(courseName, activityStatus, groupType, coursePlace, price, studentsInCourse, teachersInCourse, conductedClasses)
         {
             this.Age = age;
         }

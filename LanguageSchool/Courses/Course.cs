@@ -8,6 +8,7 @@ namespace LanguageSchool.Courses
 {
     using Enum.Course;
     using Interfaces.Person;
+    using LanguageSchool.People;
 
     public abstract class Course : ICourse
     {
@@ -20,10 +21,11 @@ namespace LanguageSchool.Courses
         private ECoursePlace coursePlace;
         private decimal price;
         private IList<IPerson> studentsInCourse;
+        private IList<IPerson> teachersInCourse;
         private IList<IConductedClasses> counductedClasses;
 
         protected Course(string courseName, ECourseActivityStatus activityStatus, EGroupType groupType, ECoursePlace coursePlace,
-            decimal price, IList<IPerson> studentsInCourse, IList<IConductedClasses> conductedClasses)
+            decimal price, IList<IPerson> studentsInCourse, IList<IPerson> teachersInCourse, IList<IConductedClasses> conductedClasses)
         {
             this.Id = ++Course.increaseId;
             this.CourseName = CourseName;
@@ -32,6 +34,7 @@ namespace LanguageSchool.Courses
             this.coursePlace = coursePlace;
             this.Price = price;
             this.StudentsInCourse = studentsInCourse;
+            this.TeachersInCourse = teachersInCourse;
             this.ConductedClasses = counductedClasses;
         }
 
@@ -127,6 +130,18 @@ namespace LanguageSchool.Courses
             }
         }
 
+        public IList<IPerson> TeachersInCourse
+        {
+            get
+            {
+                return this.teachersInCourse;
+            }
+            set
+            {
+                this.teachersInCourse = value;
+            }
+        }
+
         public IList<IConductedClasses> ConductedClasses
         {
             get
@@ -142,6 +157,26 @@ namespace LanguageSchool.Courses
         public static void Add(ICourse course)
         {
             Course.courseList.Add(course);
+        }
+
+        public void MakeActivityStatusToInactive()
+        {
+            this.ActivityStatus = ECourseActivityStatus.Inactive;
+        }
+
+        public void MakeActivityStatusToActive()
+        {
+            this.ActivityStatus = ECourseActivityStatus.Active;
+        }
+
+        public void AddStudentToCourse(CourseParticipant student)
+        {
+            this.studentsInCourse.Add(student);
+        }
+
+        public void AddTeachersToCourse(Teacher teacher)
+        {
+            this.teachersInCourse.Add(teacher);
         }
     }
 }

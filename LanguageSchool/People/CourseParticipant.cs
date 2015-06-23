@@ -6,7 +6,7 @@ using LanguageSchool.Enum.Person;
 
 namespace LanguageSchool.People
 {
-    class CourseParticipant : Client, ICourseParticipant
+    public class CourseParticipant : Client, ICourseParticipant
     {
         private string clientType;
 
