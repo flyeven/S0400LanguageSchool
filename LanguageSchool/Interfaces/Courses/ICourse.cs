@@ -8,8 +8,6 @@ namespace LanguageSchool.Interfaces.Courses
 
     public interface ICourse
     {
-        IList<ICourse> courseList { get; set; }
-
         ulong Id { get; }
 
         string CourseName { get; set; }
@@ -25,7 +23,5 @@ namespace LanguageSchool.Interfaces.Courses
         IList<IPerson> StudentsInCourse { get; set; }
 
         IList<IConductedClasses> ConductedClasses { get; set; }
-
-        void Add(ICourse course);
     }
 }
