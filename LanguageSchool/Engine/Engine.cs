@@ -7,6 +7,9 @@ namespace LanguageSchool.Engine
     using Interfaces.Engine;
     using LanguageSchool.People;
     using LanguageSchool.Interfaces.Person;
+    using LanguageSchool.Enum.Course;
+    using LanguageSchool.Courses;
+    using LanguageSchool.Interfaces.Courses;
 
     public class Engine : IEngine
     {
@@ -51,6 +54,21 @@ namespace LanguageSchool.Engine
                         this.ConvertStrintIntoDateTime(cW[11]), ESallaryType.Monthly,
                         decimal.Parse(cW[13]));
                     this.ExecuteAdd(secretary);
+                     break;
+                case "adult_language_course":
+                     string courseName = CourseInputer.CourseNameCreator(cW[2]);
+                     ECourseActivityStatus status = CourseInputer.CourseActivityCreator(cW[3]);
+                     EGroupType groupType = CourseInputer.GroupTypeCreator(cW[4]);
+                     ECoursePlace coursePlace = cW[5] == "local" ? ECoursePlace.Local : ECoursePlace.Online;
+                     decimal coursePrice = decimal.Parse(cW[6]);
+                     IList<IPerson> coursists = CourseInputer.GetCoursistsInCourse(cW[7]);
+                     IList<IPerson> teachers = CourseInputer.GetTeachersInCourse(cW[8]);
+                     IList<IConductedClasses> conductedClasses = new List<IConductedClasses>();
+                     EAge age = EAge.Adults;
+                     ELanguage language = CourseInputer.GetLanguage(cW[11]);
+                     ELanguageLevelForAdults level = CourseInputer.LanguageLevelAdults("a1");
+                     LanguageCourseForAdults languageCourseAdults = new LanguageCourseForAdults(courseName, status, groupType, 
+                         coursePlace, coursePrice, coursists, teachers, conductedClasses, age, language, level);
                      break;
                 default:
                     break;

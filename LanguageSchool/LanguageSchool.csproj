@@ -44,6 +44,7 @@
     <Compile Include="Courses\AdultCourse.cs" />
     <Compile Include="Courses\ChildrenCourse.cs" />
     <Compile Include="Courses\Course.cs" />
+    <Compile Include="Courses\CourseInputer.cs" />
     <Compile Include="Courses\LanguageCourseForAdults.cs" />
     <Compile Include="Courses\LanguageCourseForChildren.cs" />
     <Compile Include="Engine\Engine.cs" />
