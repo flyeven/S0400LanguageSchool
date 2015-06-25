@@ -28,7 +28,7 @@ namespace LanguageSchool.Courses
             decimal price, IList<IPerson> studentsInCourse, IList<IPerson> teachersInCourse, IList<IConductedClasses> conductedClasses)
         {
             this.Id = ++Course.increaseId;
-            this.CourseName = CourseName;
+            this.CourseName = courseName;
             this.activityStatus = activityStatus;
             this.GroupType = groupType;
             this.coursePlace = coursePlace;

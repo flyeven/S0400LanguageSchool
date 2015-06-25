@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LanguageSchool.Interfaces.Person.Types.Employee;
+using System;
 
 namespace LanguageSchool.Interfaces.Courses
 {
@@ -13,5 +14,9 @@ namespace LanguageSchool.Interfaces.Courses
         double ClassLengthInMinutes { get; set; }
 
         double ConductedClassHours { get; set; }
+
+        ITeacher Teacher { get; set; }
+
+        ICourse Course { get; set; }
     }
 }
