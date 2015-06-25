@@ -69,6 +69,7 @@ namespace LanguageSchool.Engine
                      ELanguageLevelForAdults level = CourseInputer.LanguageLevelAdults("a1");
                      LanguageCourseForAdults languageCourseAdults = new LanguageCourseForAdults(courseName, status, groupType, 
                          coursePlace, coursePrice, coursists, teachers, conductedClasses, age, language, level);
+                     Course.Add(languageCourseAdults);
                      break;
                 default:
                     break;
