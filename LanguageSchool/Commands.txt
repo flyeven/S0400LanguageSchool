@@ -34,11 +34,8 @@ print student milko penkov ivanov
 print teacher nadja draganova babacheva
 print teacher petko petkanov jordanov
 
-
-
-INSERT
-
-insert student	georgi <student_id> into course kiro <course_id>
+print classes into course_4
+print classes into course_1
 
 
 

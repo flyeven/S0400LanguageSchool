@@ -333,6 +333,20 @@ namespace LanguageSchool.Engine
                     }
 
                     break;
+                case "classes":
+                    ulong classesInCourseWithId = ulong.Parse(cW[3].Split('_')[1]);
+                    ICourse courseWithClasses = null;
+
+                    foreach (var c in Course.CourseList)
+                    {
+                        if (c.Id == classesInCourseWithId)
+                        {
+                            courseWithClasses = c;
+                            ConsoleRenderer.RenderCourseClassesOnTheConsole(courseWithClasses);
+                        }
+                    }
+
+                    break;
                 default:
                     break;
             }

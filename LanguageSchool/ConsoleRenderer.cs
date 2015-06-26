@@ -56,5 +56,26 @@ namespace LanguageSchool
 
             return sb.ToString();
         }
+
+        public static void RenderCourseClassesOnTheConsole(ICourse courseWithClasses)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendFormat("CourseID {0}", courseWithClasses.Id).AppendLine();
+            sb.AppendFormat("Course Name: {0}", courseWithClasses.CourseName).AppendLine().AppendLine().AppendLine();
+            sb.AppendFormat("{0}", "COUNDUCTED CLASSES: ").AppendLine().AppendLine();
+
+            foreach (var course in courseWithClasses.ConductedClasses)
+            {
+                sb.AppendFormat("Date:{0}.{1}.{2} Hours:{3} Teacher:({4} {5})", course.DateOfConduction.Day, course.DateOfConduction.Month, course.DateOfConduction.Year, 
+                    course.ConductedClassHours, course.Teacher.FirstName, course.Teacher.LastName).AppendLine();
+            }
+
+            sb.AppendLine().AppendLine().AppendLine();
+
+            string str = sb.ToString();
+
+            Console.WriteLine(str);
+        }
     }
 }
