@@ -23,12 +23,14 @@ namespace LanguageSchool.Interfaces.Courses
 
         IList<IPerson> StudentsInCourse { get; set; }
 
-        IList<IConductedClasses> ConductedClasses { get; set; }
+        IList<IClassInfo> ConductedClasses { get; set; }
 
         void PrintTeachersInCourse();
 
         void AddStudentToCourse(CourseParticipant student);
 
         void AddTeachersToCourse(Teacher teacher);
+
+        void AddConductedClass(IClassInfo conductedClass);
     }
 }

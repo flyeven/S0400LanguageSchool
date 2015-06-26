@@ -16,7 +16,7 @@ namespace LanguageSchool.Courses
         private ELanguageLevelForAdults languageLevel;
 
         public LanguageCourseForAdults(string courseName, ECourseActivityStatus activityStatus, EGroupType groupType, ECoursePlace coursePlace,
-            decimal price, IList<IPerson> studentsInCourse, IList<IPerson> teachersInCourse, IList<IConductedClasses> conductedClasses, EAge age, 
+            decimal price, IList<IPerson> studentsInCourse, IList<IPerson> teachersInCourse, IList<IClassInfo> conductedClasses, EAge age, 
             ELanguage language, 
             ELanguageLevelForAdults languageLevelForAdults)
             : base(courseName, activityStatus, groupType, coursePlace, price, studentsInCourse, teachersInCourse, conductedClasses, age)

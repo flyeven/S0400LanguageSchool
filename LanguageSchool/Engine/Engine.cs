@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using LanguageSchool.Enum.Person;
+using System.Linq;
 
 namespace LanguageSchool.Engine
 {
@@ -10,6 +11,7 @@ namespace LanguageSchool.Engine
     using LanguageSchool.Enum.Course;
     using LanguageSchool.Courses;
     using LanguageSchool.Interfaces.Courses;
+    using LanguageSchool.Interfaces.Person.Types.Employee;
 
     public class Engine : IEngine
     {
@@ -75,13 +77,56 @@ namespace LanguageSchool.Engine
                      decimal coursePrice = decimal.Parse(cW[6]);
                      IList<IPerson> coursists = CourseInputer.GetCoursistsInCourse(cW[7]);
                      IList<IPerson> teachers = CourseInputer.GetTeachersInCourse(cW[8]);
-                     IList<IConductedClasses> conductedClasses = new List<IConductedClasses>();
+                     IList<IClassInfo> conductedClasses = new List<IClassInfo>();
                      EAge age = EAge.Adults;
                      ELanguage language = CourseInputer.GetLanguage(cW[11]);
                      ELanguageLevelForAdults level = CourseInputer.LanguageLevelAdults("a1");
                      LanguageCourseForAdults languageCourseAdults = new LanguageCourseForAdults(courseName, status, groupType, 
                          coursePlace, coursePrice, coursists, teachers, conductedClasses, age, language, level);
                      Course.Add(languageCourseAdults);
+                     break;
+                case "class":
+                     ICourse courseToAddToClass = null;
+
+                     ulong courseId = ulong.Parse(cW[5].Split('_')[1]);
+                     foreach (var currentCourse in Course.CourseList)
+                     {
+                         if (currentCourse.Id == courseId)
+                         {
+                             courseToAddToClass = currentCourse;
+                         }
+                     }
+
+                     ITeacher teacherToAddToClass = null;
+
+                    ulong teacherId = ulong.Parse(cW[6].Split('_')[1]);
+                     foreach (var currentTeacher in Person.GetAllTeachers())
+                     {
+                         if (currentTeacher.Id == teacherId)
+                         {
+                             teacherToAddToClass = (ITeacher)currentTeacher;
+                         }
+                     }
+
+                     string[] conductionDateString = cW[2].Split('_')[1].Split('.');
+                     int conductionDateYear = int.Parse(conductionDateString[2]);
+                     int conductionDateMonth = int.Parse(conductionDateString[1]);
+                     int conductionDateDay = int.Parse(conductionDateString[0]);
+                     DateTime conductionDate = new DateTime(conductionDateYear, conductionDateMonth, conductionDateDay);
+
+                    string[] startHourStringArray = cW[3].Split('_')[2].Split(':');
+                    int startHourHour = int.Parse(startHourStringArray[0]);
+                    int startHourMinutes = int.Parse(startHourStringArray[1]);
+                    DateTime startHour = new DateTime(conductionDateYear, conductionDateMonth, conductionDateDay, startHourHour, startHourMinutes, 0);
+
+                    string[] endHourStringArray = cW[4].Split('_')[2].Split(':');
+                    int endHourHour = int.Parse(endHourStringArray[0]);
+                    int endHourMinutes = int.Parse(endHourStringArray[1]);
+                    DateTime endHour = new DateTime(conductionDateYear, conductionDateMonth, conductionDateDay, endHourHour, endHourMinutes, 0);
+
+                    ClassInfo currentClass = new ClassInfo(conductionDate, startHour, endHour, teacherToAddToClass, courseToAddToClass);
+
+                    courseToAddToClass.AddConductedClass(currentClass);
                      break;
                 default:
                     break;

@@ -126,7 +126,7 @@ namespace LanguageSchool.Courses
 
             int classMinutes = (int)Math.Ceiling(result);
 
-            double outputHours = classMinutes / 20;
+            double outputHours = classMinutes / 2;
 
             return outputHours;
         }

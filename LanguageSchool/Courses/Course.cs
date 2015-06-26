@@ -22,10 +22,10 @@ namespace LanguageSchool.Courses
         private decimal price;
         private IList<IPerson> studentsInCourse;
         private IList<IPerson> teachersInCourse;
-        private IList<IConductedClasses> counductedClasses;
+        private IList<IClassInfo> conductedClasses = new List<IClassInfo>();
 
         protected Course(string courseName, ECourseActivityStatus activityStatus, EGroupType groupType, ECoursePlace coursePlace,
-            decimal price, IList<IPerson> studentsInCourse, IList<IPerson> teachersInCourse, IList<IConductedClasses> conductedClasses)
+            decimal price, IList<IPerson> studentsInCourse, IList<IPerson> teachersInCourse, IList<IClassInfo> conductedClasses)
         {
             this.Id = ++Course.increaseId;
             this.CourseName = courseName;
@@ -35,7 +35,7 @@ namespace LanguageSchool.Courses
             this.Price = price;
             this.StudentsInCourse = studentsInCourse;
             this.TeachersInCourse = teachersInCourse;
-            this.ConductedClasses = counductedClasses;
+            this.ConductedClasses = conductedClasses;
         }
 
         public static IList<ICourse> CourseList
@@ -142,15 +142,15 @@ namespace LanguageSchool.Courses
             }
         }
 
-        public IList<IConductedClasses> ConductedClasses
+        public IList<IClassInfo> ConductedClasses
         {
             get
             {
-                return this.counductedClasses;
+                return this.conductedClasses;
             }
             set
             {
-                this.counductedClasses = value;
+                this.conductedClasses = value;
             }
         }
 
@@ -193,6 +193,11 @@ namespace LanguageSchool.Courses
         public override string ToString()
         {
             return base.ToString();
+        }
+
+        public void AddConductedClass(IClassInfo conductedClass)
+        {
+            this.conductedClasses.Add(conductedClass);
         }
     }
 }

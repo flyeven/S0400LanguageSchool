@@ -15,3 +15,10 @@ create teacher Stamat Stamatis Stamatov 345678 27.02.1977 2345678 stamat@stamat.
 insert student georgi 3 into course kiro 4
 insert teacher stamat 5 into course kiro 4
 insert student milko 2 into course kiro 4
+
+create class date_26.6.2015 start_hour_18:00 end_hour_19:20 course_4 teacher_5 
+create class date_28.6.2015 start_hour_18:00 end_hour_19:20 course_4 teacher_5 
+create class date_25.6.2015 start_hour_15:00 end_hour_16:20 course_1 teacher_4
+create class date_27.6.2015 start_hour_15:00 end_hour_16:20 course_1 teacher_4 
+create class date_27.6.2015 start_hour_15:00 end_hour_16:20 course_1 teacher_1 
+create class date_27.6.2015 start_hour_15:00 end_hour_16:20 course_1 teacher_1 
