@@ -140,6 +140,15 @@ namespace LanguageSchool.Engine
                     Console.WriteLine(new string('-', 20));
                     Console.WriteLine();
                     break;
+                case "all_courses":
+                    Console.WriteLine();
+                    foreach (var course in Course.CourseList)
+                    {
+                        Console.WriteLine(course);
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine();
+                    break;
                 default:
                     break;
             }

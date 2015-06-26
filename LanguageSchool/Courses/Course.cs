@@ -192,7 +192,41 @@ namespace LanguageSchool.Courses
 
         public override string ToString()
         {
-            return base.ToString();
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine(new string('*', 30));
+            sb.AppendLine(new string('*', 30));
+            sb.AppendFormat("{0}", this.GetType().Name).AppendLine();
+            sb.AppendFormat("{0}", this.Id).AppendLine();
+            sb.AppendFormat("{0}", this.CourseName).AppendLine();
+            sb.AppendFormat("{0}", this.ActivityStatus).AppendLine();
+            sb.AppendFormat("{0}", this.GroupType).AppendLine();
+            sb.AppendFormat("{0}", this.coursePlace).AppendLine();
+            sb.AppendFormat("{0} lev(s)", this.Price).AppendLine().AppendLine();
+
+            sb.AppendLine(new string('-', 30));
+
+            sb.AppendLine("Teachers leading the course: ").AppendLine();
+            foreach (var teacher in this.TeachersInCourse)
+	        {
+		        sb.AppendFormat("{0}", teacher.ToString()).AppendLine().AppendLine();
+	        }
+            sb.AppendLine(new string('-', 30));
+            sb.AppendLine().AppendLine();
+
+            sb.AppendLine(new string('-', 30));
+            sb.AppendLine("Students taking part in the course: ").AppendLine();
+            foreach (var student in this.StudentsInCourse)
+            {
+                sb.AppendFormat("{0}", student.ToString()).AppendLine().AppendLine();
+            }
+            sb.AppendLine(new string('-', 30));
+
+            sb.AppendLine().AppendLine();
+            sb.AppendLine(new string('*', 30));
+            sb.AppendLine(new string('*', 30));
+
+            return sb.ToString();
         }
     }
 }
