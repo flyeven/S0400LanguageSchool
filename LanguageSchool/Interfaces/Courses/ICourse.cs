@@ -13,6 +13,12 @@ namespace LanguageSchool.Interfaces.Courses
 
         string CourseName { get; set; }
 
+        IList<IPerson> TeachersInCourse
+        {
+            get;
+            set;
+        }
+
         ECourseActivityStatus ActivityStatus { get; set; }
 
         EGroupType GroupType { get; set; }

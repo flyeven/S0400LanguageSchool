@@ -22,3 +22,4 @@ create class date_25.6.2015 start_hour_15:00 end_hour_16:20 course_1 teacher_4
 create class date_27.6.2015 start_hour_15:00 end_hour_16:20 course_1 teacher_4 
 create class date_27.6.2015 start_hour_15:00 end_hour_16:20 course_1 teacher_1 
 create class date_27.6.2015 start_hour_15:00 end_hour_16:20 course_1 teacher_1 
+create class date_30.6.2015 start_hour_15:00 end_hour_16:20 course_1 teacher_4

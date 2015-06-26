@@ -17,7 +17,16 @@ using LanguageSchool.Courses;
         static void Main()
         {
             IEngine engine = new Engine.Engine();
-            Start(engine);
+            try
+            {
+                Start(engine);
+            }
+            catch(ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine();
+                Console.WriteLine(e.StackTrace);
+            }
         }
 
         public static void Start(IEngine engine)

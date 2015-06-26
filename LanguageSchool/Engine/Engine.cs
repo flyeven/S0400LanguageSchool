@@ -126,7 +126,26 @@ namespace LanguageSchool.Engine
 
                     ClassInfo currentClass = new ClassInfo(conductionDate, startHour, endHour, teacherToAddToClass, courseToAddToClass);
 
-                    courseToAddToClass.AddConductedClass(currentClass);
+                    bool presentTeacher = false;
+
+                    foreach (var teacherInCourse in courseToAddToClass.TeachersInCourse)
+                    {
+                        if(teacherInCourse.Id == teacherToAddToClass.Id)
+                        {
+                            presentTeacher = true;
+                            break;
+                        }
+                    }
+
+                    if (presentTeacher == true)
+                    {
+                        courseToAddToClass.AddConductedClass(currentClass);
+                    }
+                    else
+                    {
+                        throw new ArgumentException(String.Format("There's no teacher with ID {0} who conducts classes in the course with ID {1}", 
+                            teacherToAddToClass.Id, courseToAddToClass.Id));
+                    }
                      break;
                 default:
                     break;
