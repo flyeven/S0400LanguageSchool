@@ -212,6 +212,7 @@ namespace LanguageSchool.People
             StringBuilder sb = new StringBuilder();
 
             sb.AppendFormat("{0}", this.Id).AppendLine()
+                .AppendFormat("{0}", this.GetType().Name).AppendLine()
                 .AppendFormat("{0}", this.FirstName).AppendLine()
                 .AppendFormat("{0}", this.MiddleName).AppendLine()
                 .AppendFormat("{0}", this.LastName).AppendLine()

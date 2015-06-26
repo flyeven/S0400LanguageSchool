@@ -189,5 +189,10 @@ namespace LanguageSchool.Courses
                 Console.WriteLine();
             }
         }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

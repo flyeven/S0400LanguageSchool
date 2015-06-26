@@ -24,6 +24,9 @@ namespace LanguageSchool.Engine
                 case "create":
                     this.ExecuteCreate(commandWords);
                     break;
+                case "print":
+                    this.ExecutePrint(commandWords);
+                    break;
                 default:
                     break;
             }
@@ -71,6 +74,72 @@ namespace LanguageSchool.Engine
                          coursePlace, coursePrice, coursists, teachers, conductedClasses, age, language, level);
                      Course.Add(languageCourseAdults);
                      break;
+                default:
+                    break;
+            }
+        }
+
+        public void ExecutePrint(string[] commandWords)
+        {
+            string[] cW = commandWords;
+
+            switch (cW[1])
+            {
+                case "all_teachers":
+                    Console.WriteLine();
+                    Console.WriteLine(new string('-', 20));
+                    foreach(var teacher in Person.GetAllTeachers())
+                    {
+                        Console.WriteLine(teacher);
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine(new string('-', 20));
+                    Console.WriteLine();
+                    break;
+                case "all_students":
+                    Console.WriteLine();
+                    Console.WriteLine(new string('-', 20));
+                    foreach(var coursist in Person.GetAllCourseParticipants())
+                    {
+                        Console.WriteLine(coursist);
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine(new string('-', 20));
+                    Console.WriteLine();
+                    break;
+                case "all_secretaries":
+                    Console.WriteLine();
+                    Console.WriteLine(new string('-', 20));
+                    foreach(var secretary in Person.GetAllSecretaries())
+                    {
+                        Console.WriteLine(secretary);
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine(new string('-', 20));
+                    Console.WriteLine();
+                    break;
+                case "all_clients":
+                    Console.WriteLine();
+                    Console.WriteLine(new string('-', 20));
+                    foreach (var client in Person.GetAllClients())
+                    {
+                        Console.WriteLine(client);
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine(new string('-', 20));
+                    Console.WriteLine();
+                    break;
+                case "all_employees":
+                    Console.WriteLine();
+                    Console.WriteLine(new string('-', 20));
+                    foreach (var employee in Person.GetAllEmployees())
+                    {
+                        Console.WriteLine(employee);
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine(new string('-', 20));
+                    Console.WriteLine();
+                    break;
                 default:
                     break;
             }

@@ -17,15 +17,6 @@ using LanguageSchool.Courses;
         {
             IEngine engine = new Engine.Engine();
             Start(engine);
-
-            IList<ICourse> courses = new List<ICourse>();
-            courses = Course.CourseList;
-
-            foreach (var course in courses)
-            {
-                course.PrintTeachersInCourse();
-                break;
-            }
         }
 
         public static void Start(IEngine engine)
