@@ -149,6 +149,39 @@ namespace LanguageSchool.Engine
                     }
                     Console.WriteLine();
                     break;
+                case "course":
+                    string courseName = cW[2];
+
+                    foreach (var currentCourse in Course.CourseList)
+                    {
+                        if (courseName == currentCourse.CourseName.ToLower())
+                        {
+                            Console.WriteLine(currentCourse);
+                            Console.WriteLine();
+                        }
+                    }
+                    break;
+                case "student":
+                    string firstName = cW[2];
+                    string middleName = cW[3];
+                    string lastName = cW[4];
+
+                    List<IPerson> allStudents = Person.GetAllCourseParticipants();
+
+                    Console.WriteLine();
+
+                    foreach (var currentStudent in allStudents)
+                    {
+                        if (currentStudent.FirstName.ToLower() == firstName.ToLower()
+                            && currentStudent.MiddleName.ToLower() == middleName.ToLower()
+                            && currentStudent.LastName.ToLower() == lastName.ToLower())
+                        {
+                            Console.WriteLine(currentStudent.ToString());
+                            Console.WriteLine();
+                        }
+                    }
+
+                    break;
                 default:
                     break;
             }
