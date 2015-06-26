@@ -1,9 +1,3 @@
-Commands
-
-................................................................................................................................................
-
-CREATE
-
 create course_participant Ivan Ivanov Hristov 345678 27.02.1977 2345678 email@email.com Bulgaria Sofia 12.06.2015 Monthly 2548
 create teacher Petko Petkanov Jordanov 345678 27.02.1977 2345678 petko@petko.com France Paris 12.06.2015 Monthly 2548
 create secretary Mihaela Metodieva Mitrina 345678 27.02.1977 2345678 mihaela@mihaela.com France Paris 12.06.2015 Monthly 5000
@@ -13,68 +7,6 @@ create teacher Nadja Draganova Babacheva 345678 27.02.1977 2345678 nadja@nadja.c
 create adult_language_course ivan active group_4_persons local 500 Ivan_Ivanov_Hristov_email@email.com,Milko_Penkov_Ivanov_milko@milko.com Petko_Petkanov_Jordanov_petko@petko.com,Nadja_Draganova_Babacheva_nadja@nadja.com null adults english a1
 create adult_language_course svetoslav active group_4_persons local 500 Ivan_Ivanov_Hristov_email@email.com,Milko_Penkov_Ivanov_milko@milko.com Petko_Petkanov_Jordanov_petko@petko.com,Nadja_Draganova_Babacheva_nadja@nadja.com null adults english a1
 create adult_language_course ivan active group_3_persons local 250 Ivan_Ivanov_Hristov_email@email.com Nadja_Draganova_Babacheva_nadja@nadja.com null adults french a2
+
 create adult_language_course kiro active group_7_persons local 250 null_null_null_null null_null_null_null null adults french b2
-
-
-PRINT
-
-print all_teachers
-print all_students
-print all_secretaries
-print all_clients
-print all_employees
-print all_courses
-
-print course ivan
-print course svetoslav
-
-print student ivan ivanov hristov
-print student milko penkov ivanov
-
-print teacher nadja draganova babacheva
-print teacher petko petkanov jordanov
-
-
-
-INSERT
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+create course_participant Georgi Manolev Haralampiev 345678 27.02.1977 2345678 georgi@georgi.com Bulgaria Sofia 12.06.2015 Monthly 2548
