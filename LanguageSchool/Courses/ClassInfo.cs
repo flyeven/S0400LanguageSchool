@@ -23,7 +23,8 @@ namespace LanguageSchool.Courses
             this.DateOfConduction = dateOfConduction;
             this.ClassStartHour = classStartHour;
             this.ClassEndHour = classEndHour;
-            this.ClassLengthInMinutes = CalculateClassLengthInMinutes(this.ClassStartHour, this.ClassEndHour);
+            this.ClassLengthInMinutes = this.CalculateClassLengthInMinutes(this.ClassStartHour, this.ClassEndHour);
+            this.ConductedClassHours = this.CalculateNumberOfHoursTaken(this.ClassLengthInMinutes);
             this.Teacher = teacher;
             this.Course = course;
         }
@@ -80,11 +81,11 @@ namespace LanguageSchool.Courses
         {
             get
             {
-                throw new NotImplementedException();
+                return this.conductedClassHours;
             }
             set
             {
-                throw new NotImplementedException();
+                this.conductedClassHours = value;
             }
         }
 
@@ -92,11 +93,11 @@ namespace LanguageSchool.Courses
         {
             get
             {
-                throw new NotImplementedException();
+                return this.teacher;
             }
             set
             {
-                throw new NotImplementedException();
+                this.teacher = value;
             }
         }
 
@@ -104,19 +105,30 @@ namespace LanguageSchool.Courses
         {
             get
             {
-                throw new NotImplementedException();
+                return this.course;
             }
             set
             {
-                throw new NotImplementedException();
+                this.course = value;
             }
         }
 
         private double CalculateClassLengthInMinutes(DateTime start, DateTime end)
         {
-            double minutes = end.Date.Hour - start.Date.Hour;
+            double minutes = (end.Subtract(start)).TotalMinutes;
 
-            return 0;
+            return minutes;
+        }
+
+        private double CalculateNumberOfHoursTaken(double minutes)
+        {
+            double result = minutes / 20;
+
+            int classMinutes = (int)Math.Ceiling(result);
+
+            double outputHours = classMinutes / 20;
+
+            return outputHours;
         }
     }
 }

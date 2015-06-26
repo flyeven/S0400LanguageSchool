@@ -178,5 +178,16 @@ namespace LanguageSchool.Courses
         {
             this.teachersInCourse.Add(teacher);
         }
+
+        public void PrintTeachersInCourse()
+        {
+            IList<IPerson> teachersInCourse = this.TeachersInCourse;
+
+            foreach (var currentTeacher in teachersInCourse)
+            {
+                Console.WriteLine(currentTeacher.ToString());
+                Console.WriteLine();
+            }
+        }
     }
 }

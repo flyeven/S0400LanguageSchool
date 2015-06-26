@@ -9,26 +9,23 @@ namespace LanguageSchool
     using System.Collections.Generic;
     using LanguageSchool.Interfaces.Person;
 using LanguageSchool.Courses;
+    using LanguageSchool.Interfaces.Courses;
 
     class LanguageSchoolMain
     {
         static void Main()
         {
-            ClassInfo cl = new ClassInfo(DateTime.Now, DateTime.Now, DateTime.Now.AddHours(5), null, null);
-
-            int a = 5;
             IEngine engine = new Engine.Engine();
             Start(engine);
 
-            //Person.GetAllTeachers();
+            IList<ICourse> courses = new List<ICourse>();
+            courses = Course.CourseList;
 
-            //Person.GetAllCourseParticipants();
-
-            //Person.GetAllSecretaries();
-
-            //Person.GetAllClients();
-
-            //Person.GetAllEmployees();
+            foreach (var course in courses)
+            {
+                course.PrintTeachersInCourse();
+                break;
+            }
         }
 
         public static void Start(IEngine engine)

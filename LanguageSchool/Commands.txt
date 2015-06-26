@@ -12,9 +12,6 @@ create teacher Nadja Draganova Babacheva 345678 27.02.1977 2345678 nadja@nadja.c
 
 ................................................................................................................................................
 
-public LanguageCourseForAdults(string courseName, ECourseActivityStatus activityStatus, EGroupType groupType, ECoursePlace coursePlace,
-            decimal price, IList<IPerson> studentsInCourse, IList<IPerson> teachersInCourse, IList<IConductedClasses> conductedClasses, EAge age, ELanguage language, 
-            ELanguageLevelForAdults languageLevelForAdults)
 
 
 create course_participant Ivan Ivanov Hristov 345678 27.02.1977 2345678 email@email.com Bulgaria Sofia 12.06.2015 Monthly 2548

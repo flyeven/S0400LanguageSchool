@@ -23,5 +23,7 @@ namespace LanguageSchool.Interfaces.Courses
         IList<IPerson> StudentsInCourse { get; set; }
 
         IList<IConductedClasses> ConductedClasses { get; set; }
+
+        void PrintTeachersInCourse();
     }
 }
