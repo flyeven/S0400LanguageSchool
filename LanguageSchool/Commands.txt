@@ -38,6 +38,7 @@ print teacher petko petkanov jordanov
 
 INSERT
 
+insert student	georgi <student_id> into course kiro <course_id>
 
 
 

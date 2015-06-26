@@ -33,6 +33,9 @@ namespace LanguageSchool.Engine
                 case "print":
                     this.ExecutePrint(commandWords);
                     break;
+                case "insert":
+                    this.ExecuteInsert(commandWords);
+                    break;
                 default:
                     break;
             }
@@ -80,6 +83,32 @@ namespace LanguageSchool.Engine
                          coursePlace, coursePrice, coursists, teachers, conductedClasses, age, language, level);
                      Course.Add(languageCourseAdults);
                      break;
+                default:
+                    break;
+            }
+        }
+
+        public void ExecuteInsert(string[] commandWords)
+        {
+            string[] cW = commandWords;
+
+            switch (cW[1])
+            {
+                case "student":
+                    string studentName = cW[2];
+                    string studentId = cW[3];
+                    CourseParticipant studentToInsert;
+
+                    foreach (var currentStudent in Person.GetAllClients())
+                    {
+                        if (currentStudent.FirstName.ToLower() == studentName.ToLower()
+                            && currentStudent.Id == ulong.Parse(studentId))
+                        {
+                            studentToInsert = (CourseParticipant) currentStudent;
+                        }
+                    }
+
+                    break;
                 default:
                     break;
             }

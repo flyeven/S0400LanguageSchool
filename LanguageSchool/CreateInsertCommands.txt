@@ -10,3 +10,5 @@ create adult_language_course ivan active group_3_persons local 250 Ivan_Ivanov_H
 
 create adult_language_course kiro active group_7_persons local 250 null_null_null_null null_null_null_null null adults french b2
 create course_participant Georgi Manolev Haralampiev 345678 27.02.1977 2345678 georgi@georgi.com Bulgaria Sofia 12.06.2015 Monthly 2548
+
+insert student georgi 3 into course kiro 4
