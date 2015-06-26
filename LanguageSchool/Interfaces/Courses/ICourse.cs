@@ -5,6 +5,7 @@ using System.Collections.Generic;
 namespace LanguageSchool.Interfaces.Courses
 {
     using Person;
+    using LanguageSchool.People;
 
     public interface ICourse
     {
@@ -25,5 +26,9 @@ namespace LanguageSchool.Interfaces.Courses
         IList<IConductedClasses> ConductedClasses { get; set; }
 
         void PrintTeachersInCourse();
+
+        void AddStudentToCourse(CourseParticipant student);
+
+        void AddTeachersToCourse(Teacher teacher);
     }
 }

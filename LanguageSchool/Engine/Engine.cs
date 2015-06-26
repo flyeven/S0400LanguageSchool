@@ -92,25 +92,56 @@ namespace LanguageSchool.Engine
         {
             string[] cW = commandWords;
 
-            switch (cW[1])
+            if (cW[5] == "course")
             {
-                case "student":
-                    string studentName = cW[2];
-                    string studentId = cW[3];
-                    CourseParticipant studentToInsert;
+                string courseName = cW[6];
+                string courseId = cW[7];
 
-                    foreach (var currentStudent in Person.GetAllClients())
+                ICourse courseToInsertInto = null;
+
+                foreach (var currentCourse in Course.CourseList)
+                {
+                    if (currentCourse.CourseName.ToLower() == courseName.ToLower() && currentCourse.Id == ulong.Parse(courseId))
                     {
-                        if (currentStudent.FirstName.ToLower() == studentName.ToLower()
-                            && currentStudent.Id == ulong.Parse(studentId))
-                        {
-                            studentToInsert = (CourseParticipant) currentStudent;
-                        }
+                        courseToInsertInto = currentCourse;
                     }
+                }
 
-                    break;
-                default:
-                    break;
+                switch (cW[1])
+                {
+                    case "student":
+                        string studentName = cW[2];
+                        string studentId = cW[3];
+                        CourseParticipant studentToInsert;
+
+                        foreach (var currentStudent in Person.GetAllClients())
+                        {
+                            if (currentStudent.FirstName.ToLower() == studentName.ToLower()
+                                && currentStudent.Id == ulong.Parse(studentId))
+                            {
+                                studentToInsert = (CourseParticipant)currentStudent;
+                                courseToInsertInto.AddStudentToCourse(studentToInsert);
+                            }
+                        }
+                        break;
+                    case "teacher":
+                        string teacherName = cW[2];
+                        string teacherId = cW[3];
+                        Teacher teacherToInsert;
+
+                        foreach (var currentTeacher in Person.GetAllTeachers())
+                        {
+                            if (currentTeacher.FirstName.ToLower() == teacherName.ToLower()
+                                && currentTeacher.Id == ulong.Parse(teacherId))
+                            {
+                                teacherToInsert = (Teacher)currentTeacher;
+                                courseToInsertInto.AddTeachersToCourse(teacherToInsert);
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 
