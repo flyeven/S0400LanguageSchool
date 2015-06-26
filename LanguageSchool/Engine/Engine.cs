@@ -17,7 +17,13 @@ namespace LanguageSchool.Engine
 
         public void DispatchCommands(string commandStatement)
         {
-            string[] commandWords = commandStatement.Split(' ');
+            string[] commandWords = new string[20];
+            string[] comm = commandStatement.Split(' ');
+
+            for (int i = 0; i < comm.Length; i++)
+            {
+                commandWords[i] = comm[i];
+            }
 
             switch (commandWords[0])
             {
@@ -150,7 +156,7 @@ namespace LanguageSchool.Engine
                     Console.WriteLine();
                     break;
                 case "course":
-                    string courseName = cW[2];
+                    string courseName = cW[2] == null ? "null" : cW[2];
 
                     foreach (var currentCourse in Course.CourseList)
                     {
@@ -162,9 +168,9 @@ namespace LanguageSchool.Engine
                     }
                     break;
                 case "student":
-                    string firstName = cW[2];
-                    string middleName = cW[3];
-                    string lastName = cW[4];
+                    string firstName = cW[2] == null ? "null" : cW[2];
+                    string middleName = cW[3] == null ? "null" : cW[3];
+                    string lastName = cW[4] == null ? "null" : cW[4];
 
                     List<IPerson> allStudents = Person.GetAllCourseParticipants();
 
@@ -177,6 +183,27 @@ namespace LanguageSchool.Engine
                             && currentStudent.LastName.ToLower() == lastName.ToLower())
                         {
                             Console.WriteLine(currentStudent.ToString());
+                            Console.WriteLine();
+                        }
+                    }
+
+                    break;
+                case "teacher":
+                    string firstNameTeacher = cW[2] == null ? "null" : cW[2];
+                    string middleNameTeacher = cW[3] == null ? "null" : cW[3];
+                    string lastNameTeacher = cW[4] == null ? "null" : cW[4];
+
+                    List<IPerson> allteachers = Person.GetAllTeachers();
+
+                    Console.WriteLine();
+
+                    foreach (var currentTeacher in allteachers)
+                    {
+                        if (currentTeacher.FirstName.ToLower() == firstNameTeacher.ToLower()
+                            && currentTeacher.MiddleName.ToLower() == middleNameTeacher.ToLower()
+                            && currentTeacher.LastName.ToLower() == lastNameTeacher.ToLower())
+                        {
+                            Console.WriteLine(currentTeacher.ToString());
                             Console.WriteLine();
                         }
                     }
