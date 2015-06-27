@@ -67,8 +67,13 @@ namespace LanguageSchool
 
             foreach (var course in courseWithClasses.ConductedClasses)
             {
-                sb.AppendFormat("Date:{0}.{1}.{2} Hours:{3} Teacher:({4} {5})", course.DateOfConduction.Day, course.DateOfConduction.Month, course.DateOfConduction.Year, 
-                    course.ConductedClassHours, course.Teacher.FirstName, course.Teacher.LastName).AppendLine();
+                sb.AppendFormat("Date:{0}.{1}.{2} Start:[{4}:{5}] End:[{6}:{7}] Hours:{3} Teacher:({8} {9})", 
+                    course.DateOfConduction.Day, course.DateOfConduction.Month, 
+                    course.DateOfConduction.Year, 
+                    course.ConductedClassHours, 
+                    course.ClassStartHour.Hour, course.ClassStartHour.Minute,
+                    course.ClassEndHour.Hour, course.ClassEndHour.Minute,
+                    course.Teacher.FirstName, course.Teacher.LastName).AppendLine();
             }
 
             sb.AppendLine().AppendLine().AppendLine();
