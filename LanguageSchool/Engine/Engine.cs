@@ -38,6 +38,9 @@ namespace LanguageSchool.Engine
                 case "insert":
                     this.ExecuteInsert(commandWords);
                     break;
+                case "set":
+                    this.ExecuteSet(commandWords);
+                    break;
                 default:
                     break;
             }
@@ -349,6 +352,36 @@ namespace LanguageSchool.Engine
                     break;
                 case "total_hours_in_courses":
                     ConsoleRenderer.PrintTotalHoursInCourses();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void ExecuteSet(string[] commandWords)
+        {
+            string cW = commandWords[1].Split('_')[0];
+            switch(cW)
+            {
+                case "honorarium":
+                    ulong courseId = ulong.Parse(commandWords[2].Split('_')[1]);
+                    ulong teacherId = ulong.Parse(commandWords[3].Split('_')[1]);
+                    Course course = CourseInputer.GetCourseFromId(courseId);
+                    Teacher teacher = CourseInputer.GetTeacherFromId(teacherId);
+                    decimal result = 0M;
+                    string hon = commandWords[1].Split('_')[1];
+                    result = decimal.Parse(hon.ToLower().ToString());
+
+                    bool exists = HonorariumTeacher.HonoraryCheck(courseId, teacherId);
+
+                    if(exists == false)
+                    {
+                        HonorariumTeacher honorarium = 
+                            new HonorariumTeacher(teacher, course, result);
+
+                        HonorariumTeacher.AddHonorariumToBase(honorarium);
+                    }
+                    
                     break;
                 default:
                     break;

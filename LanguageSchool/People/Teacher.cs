@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LanguageSchool.Interfaces.Person.Types.Employee;
 using LanguageSchool.Enum.Person;
+using LanguageSchool.Courses;
 
 namespace LanguageSchool.People
 {

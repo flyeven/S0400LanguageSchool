@@ -196,5 +196,34 @@ namespace LanguageSchool.Courses
 
             return output;
         }
+
+        public static Course GetCourseFromId(ulong id)
+        {
+            Course courseToReturn = null;
+            foreach (var item in Course.CourseList)
+            {
+                if (item.Id == id)
+                {
+                    courseToReturn = (Course)item;
+                }
+            }
+
+            return courseToReturn;
+        }
+
+        public static Teacher GetTeacherFromId(ulong id)
+        {
+            Teacher teacherToReturn = null;
+            foreach (var item in Person.GetAllTeachers())
+            {
+                if (item.Id == id)
+                {
+                    teacherToReturn = (Teacher)item;
+                    break;
+                }
+            }
+
+            return teacherToReturn;
+        }
     }
 }

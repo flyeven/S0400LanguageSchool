@@ -27,3 +27,9 @@ create class date_27.6.2015 start_hour_15:00 end_hour_16:20 course_1 teacher_1
 create class date_30.6.2015 start_hour_15:00 end_hour_16:20 course_1 teacher_4
 
 create class date_30.6.2015 start_hour_14:00 end_hour_16:40 course_1 teacher_5
+create class date_27.6.2015 start_hour_9:00 end_hour_12:00 course_1 teacher_1 
+create class date_27.6.2015 start_hour_9:00 end_hour_12:00 course_1 teacher_1
+
+set honorarium_6,60 course_1 teacher_4
+set honorarium_6,20 course_1 teacher_1
+set honorarium_5,20 course_4 teacher_5
