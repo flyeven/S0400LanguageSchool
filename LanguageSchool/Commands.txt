@@ -37,6 +37,8 @@ print teacher petko petkanov jordanov
 print classes into course_4
 print classes into course_1
 
+print total_hours_in_courses
+
 
 
 

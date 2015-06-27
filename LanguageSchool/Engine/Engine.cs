@@ -347,6 +347,9 @@ namespace LanguageSchool.Engine
                     }
 
                     break;
+                case "total_hours_in_courses":
+                    ConsoleRenderer.PrintTotalHoursInCourses();
+                    break;
                 default:
                     break;
             }

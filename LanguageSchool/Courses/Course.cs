@@ -199,5 +199,17 @@ namespace LanguageSchool.Courses
         {
             this.conductedClasses.Add(conductedClass);
         }
+
+        public double CalculateTotalHoursInCourse()
+        {
+            double totalHoursInClass = 0;
+
+            foreach (var item in this.ConductedClasses)
+            {
+                totalHoursInClass += item.ConductedClassHours;
+            }
+
+            return totalHoursInClass;
+        }
     }
 }

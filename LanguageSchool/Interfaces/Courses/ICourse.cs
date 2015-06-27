@@ -38,5 +38,7 @@ namespace LanguageSchool.Interfaces.Courses
         void AddTeachersToCourse(Teacher teacher);
 
         void AddConductedClass(IClassInfo conductedClass);
+
+        double CalculateTotalHoursInCourse();
     }
 }

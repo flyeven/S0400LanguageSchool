@@ -82,5 +82,13 @@ namespace LanguageSchool
 
             Console.WriteLine(str);
         }
+
+        public static void PrintTotalHoursInCourses()
+        {
+            foreach (var item in Courses.Course.CourseList)
+            {
+                Console.WriteLine("CourseID:{0} CourseName:{1} TotalHoursTaken:{2}", item.Id, item.CourseName, item.CalculateTotalHoursInCourse());
+            }
+        }
     }
 }
